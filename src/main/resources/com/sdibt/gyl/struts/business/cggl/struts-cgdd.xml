@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="cgdd" namespace="/" extends="struts-default">
+		<action name="cgddAction_*" method="{1}" class="cgddAction">
+			<result name="cgddList">WEB-INF/jsp/gyl/business/cggl/cgdd/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/gyl/business/cggl/cgdd/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/gyl/business/cggl/cgdd/update.jsp</result>
+			<result name="business_error">business_error.jsp</result>
+			<result type="chain" name="chain">
+				<param name="actionName">cgddAction</param>
+  				<param name="method">showCgdd</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="customer" namespace="/" extends="interceptor">
+		<action name="customerAction_*" method="{1}" class="customerAction">
+			<result name="listAction">WEB-INF/jsp/gyl/basedata/customer/list.jsp</result>
+			<result name="action2action" type="redirectAction">customerAction_showPageResult.action</result>
+			<result name="addUI">WEB-INF/jsp/gyl/basedata/customer/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/gyl/basedata/customer/update.jsp</result>
+			<result name="chain" type="chain">
+				<param name="actionName">customerAction</param>
+  				<param name="method">showPageResult</param>
+			</result>
+		</action>
+	</package>
+</struts>

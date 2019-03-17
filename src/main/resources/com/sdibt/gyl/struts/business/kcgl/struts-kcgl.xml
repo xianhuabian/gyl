@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="kcgl" namespace="/" extends="struts-default">
+		<action name="kcglAction_*" method="{1}" class="kcglAction">
+			<result name="listAction">WEB-INF/jsp/gyl/business/kcgl/list.jsp</result>
+			<result name="action2action" type="redirectAction">kcglAction_showPageResult.action</result>
+			<result name="addUI">WEB-INF/jsp/gyl/business/kcgl/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/gyl/business/kcgl/update.jsp</result>
+			<result name="map">WEB-INF/jsp/gyl/business/kcgl/ck_map.jsp</result>
+			<result type="chain" name="chain">
+				<param name="actionName">kcglAction</param>
+  				<param name="method">showPageResult</param>
+			</result>
+		</action>
+	</package>
+</struts>

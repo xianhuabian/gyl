@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="cgrkd" namespace="/" extends="struts-default">
+		<action name="cgrkdAction_*" method="{1}" class="cgrkdAction">
+			<result name="cgrkdList">WEB-INF/jsp/gyl/business/cggl/cgrkd/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/gyl/business/cggl/cgrkd/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/gyl/business/cggl/cgrkd/update.jsp</result>
+			<result name="business_error">business_error.jsp</result>
+			<result type="chain" name="chain">
+				<param name="actionName">cgrkdAction</param>
+  				<param name="method">showCgrkd</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>

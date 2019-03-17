@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-22 20:41:11 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.sdibt.gyl.domain.business.kcgl.Kc" table="KC">
+        <id name="ckspbh" >
+            <column name="CKSPBH" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="repository" class="com.sdibt.gyl.domain.basedata.Repository" fetch="join">
+            <column name="REPOSITORY" />
+        </many-to-one>
+        <many-to-one name="product" class="com.sdibt.gyl.domain.basedata.Product" fetch="join">
+            <column name="PRODUCT" />
+        </many-to-one>
+        <property name="quantity" type="java.lang.Long">
+            <column name="QUANTITY" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-22 20:41:11 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.sdibt.gyl.domain.basedata.Product" table="PRODUCT">
+        <id name="pid" type="java.lang.Long">
+            <column name="PID" />
+            <generator class="assigned" />
+        </id>
+        <property name="spmc" type="java.lang.String">
+            <column name="SPMC" />
+        </property>
+        <property name="xh" type="java.lang.String">
+            <column name="XH" />
+        </property>
+        <property name="spbm" type="java.lang.String">
+            <column name="SPBM" />
+        </property>
+        <property name="dw" type="java.lang.String">
+            <column name="DW" />
+        </property>
+        <property name="shulv" type="java.lang.Double">
+            <column name="SHULV" />
+        </property>
+    </class>
+</hibernate-mapping>
